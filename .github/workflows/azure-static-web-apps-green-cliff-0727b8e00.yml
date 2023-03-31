@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     env:
-      API_BASE_URL: https://green-cliff-0727b8e00.2.azurestaticapps.net
+      API_BASE_URL: ${{ secrets.API_BASE_URL }}
     steps:
       - uses: actions/checkout@v2
         with:

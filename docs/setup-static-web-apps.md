@@ -109,4 +109,4 @@ GitHub Actions の実行が完了したら、「参照」をクリック (②) �
 
 ----
 
-[⏮️ 前へ](./setup-application.md) | [📋 目次](./README.md) | [⏭️ 次へ](./setup-ad-b2c.md)
+[⏮️ 前へ](./setup-application.md) | [📋 目次](../README.md) | [⏭️ 次へ](./setup-ad-b2c.md)
