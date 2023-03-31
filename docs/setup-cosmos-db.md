@@ -96,4 +96,4 @@ Azure Static Web App のリソース画面を開き、左のメニューの「�
 
 ----
 
-[⏮️ 前へ](./setup-auth.md) | [📋 目次](./README.md) | [⏭️ 次へ](./create-authenticated-data.md)
+[⏮️ 前へ](./setup-auth.md) | [📋 目次](../README.md) | [⏭️ 次へ](./create-authenticated-data.md)

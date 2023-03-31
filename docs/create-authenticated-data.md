@@ -439,4 +439,4 @@ SDK を使えばシンプルなコードで Cosmos DB を操作できます。
 
 ---
 
-[⏮️ 前へ](./setup-cosmos-db.md) | [📋 目次](./README.md) | [⏭️ 次へ](./customize-ad-b2c-builtin-ui.md)
+[⏮️ 前へ](./setup-cosmos-db.md) | [📋 目次](../README.md) | [⏭️ 次へ](./customize-ad-b2c-builtin-ui.md)

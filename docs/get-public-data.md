@@ -156,4 +156,4 @@ Static Web Apps は GitHub Actions と連携してビルド・デプロイを行
 
 ---
 
-[⏮️ 前へ](./customize-ad-b2c-builtin-ui.md) | [📋 目次](./README.md)
+[⏮️ 前へ](./customize-ad-b2c-builtin-ui.md) | [📋 目次](../README.md)

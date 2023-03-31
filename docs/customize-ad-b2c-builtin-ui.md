@@ -85,4 +85,4 @@ B2C のメニュー「会社ブランド」をクリック →「構成」をク
 
 ----
 
-[⏮️ 前へ](./create-authenticated-data.md) | [📋 目次](./README.md) | [⏭️ 次へ](./get-public-data.md)
+[⏮️ 前へ](./create-authenticated-data.md) | [📋 目次](../README.md) | [⏭️ 次へ](./get-public-data.md)
