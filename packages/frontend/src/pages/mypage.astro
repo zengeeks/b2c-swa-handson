@@ -1,0 +1,10 @@
+---
+import "../../styles/mypage.css";
+import Vote from "../components/Vote";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <h2>マイページ</h2>
+  <Vote client:load />
+</Layout>

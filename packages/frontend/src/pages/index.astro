@@ -1,0 +1,16 @@
+---
+import "../../styles/index.css";
+import Layout from "../layouts/Layout.astro";
+
+const response = await fetch(`${import.meta.env.API_BASE_URL}/api/votes/count`);
+const { count } = await response.json();
+---
+
+<Layout>
+  <div class="count">
+    現在の投票数は {count} 件です
+  </div>
+  <div class="vote">
+    <a href="/mypage">マイページ</a>で投票してみよう
+  </div>
+</Layout>

@@ -1,0 +1,11 @@
+.count {
+  background-color: #ecf2f8;
+  padding: 30px 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  color: #626e87;
+}
+
+.vote a {
+  padding: 8px;
+}

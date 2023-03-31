@@ -1,2 +1,8 @@
-# b2c-swa-handson
-Azure AD B2C と Static Web Apps の認証をシンプルに実装するハンズオン
+# 簡単に認証を実現 🔗 Azure AD B2C と Azure Static Web Apps の認証連携ハンズオン
+
+このリポジトリでは、静的コンテンツや Web アプリのホストに最適な **Azure Static Web Apps** と、コンシューマーユーザー向け認証基盤の **Azure AD B2C** を使って、コードをほぼ書かずに認証連携を行うハンズオンです。  
+その他に最小限のコードで API を実装やデータアクセス、認証画面のカスタマイズが学べます。
+
+Azure と GitHub のテクノロジーを活用したこのハンズオンは、以下から概要を確認して進めることができます。
+
+- [セルフペースドハンズオン](./docs/README.md)

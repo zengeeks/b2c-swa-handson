@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json.schemastore.org/staticwebapp.config.json",
+  "routes": [
+    {
+      "route": "/mypage",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/api/auth/*",
+      "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/login",
+      "rewrite": "/.auth/login/aadb2c"
+    }
+  ],
+  "responseOverrides": {
+    "401": {
+      "redirect": "/login"
+    }
+  },
+  "auth": {
+    "identityProviders": {
+      "customOpenIdConnectProviders": {
+        "aadb2c": {
+          "registration": {
+            "clientIdSettingName": "B2C_CLIENT_ID",
+            "clientCredential": {
+              "clientSecretSettingName": "B2C_SECRET"
+            },
+            "openIdConnectConfiguration": {
+              "wellKnownOpenIdConfiguration": "https://zengeeksb2chandson.b2clogin.com/zengeeksb2chandson.onmicrosoft.com/v2.0/.well-known/openid-configuration?p=B2C_1_susi"
+            }
+          },
+          "login": {
+            "scopes": ["openid", "profile"]
+          }
+        }
+      }
+    }
+  }
+}

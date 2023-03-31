@@ -1,0 +1,18 @@
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 20px 80px;
+  appearance: none;
+  font-size: 1rem;
+  background-color: #0039a9;
+  border-radius: 40px;
+  color: #fff;
+  margin-top: 20px;
+}
