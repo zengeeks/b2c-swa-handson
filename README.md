@@ -34,7 +34,7 @@
 
 - Visual Studio Code
 - Microsoft Azure
-- GitHub の利用
+- GitHub
 
 ハンズオンをはじめるにあたっては、以下をご参照して環境を準備します。
 
