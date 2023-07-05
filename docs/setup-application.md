@@ -126,8 +126,8 @@ VS Code の Explorer で `packages\frontend\src` 直下の `pages` フォルダ�
 
 VS Code のターミナルで以下のコマンドを実行して起動します。
 
-- `cd .\packages\frontend\` を実行
-- `npm run start` を実行
+- `cd packages/frontend` を実行
+- `npm run start` を実行 (Codespaces で実行している場合は  `npm run start -- --host 0.0.0.0` を実行)
 - 起動すると Local の URL が表示されますので、ブラウザでアクセスします。(下図だと `http://127.0.0.1:3000/`)
 
 ![img](./images/setup-application/2-04.png)
