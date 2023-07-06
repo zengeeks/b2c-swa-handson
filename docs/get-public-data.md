@@ -13,11 +13,23 @@ Astro ではアプリケーションビルド時にデータを fetch して静�
 
 ## 1. Function の作成と設定
 
-投票合計件数を取得する Function を新規作成します。
+投票合計件数を取得する Function を新規作成します。  
 
-[ログインユーザーに依存するデータを作成・取得する - 1. Function の作成と設定](./setup-application.md#3-azure-functions-で-api-を実装) の手順に従い、`Provide a function name` には `GetVotesCount` と回答してください。
+VS Code のメニュー「View」→「Command Palette」をクリックします。
 
-また、 `packages/api/GetVotesCount/function.json` を下記の通り編集して `GET /api/votes/count` でアクセス可能にします。
+![img](./images/setup-application/3-03.png)
+
+コマンドパレットで「functions create」と入力し、`Azure Functions: Create Function...` をクリックします。
+
+![img](./images/create-authenticated-data/1-02.png)
+
+以降対話式になりますので、以下を参考に入力を進めます。
+
+- **Select a template for your projects first function**: `HTTP trigger`
+- **Provide a function name**: この章では `GetVotesCount` と入力し `Enter` キーを押します。
+- **Authorization level**: `Anonymous`
+
+`packages/api/GetVotesCount/function.json` を開き下記の通り編集します。これでこの Function は `GET /api/votes/count` でアクセス可能になります。
 
 ```diff
 {
