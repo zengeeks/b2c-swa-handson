@@ -100,6 +100,8 @@ const { count } = await response.json();
 `import.meta.env.API_BASE_URL` は環境変数です。  
 フロントエンドで参照される環境変数は GitHub Workflow で設定できます。 `.github/workflows` 直下に生成されている yml ファイルで下記のように23行目あたりにある `uses: Azure/static-web-apps-deploy@v1` の下に追記します。
 
+※ インデントがずれないようご注意ください。
+
 ```diff
   - name: Build And Deploy
     id: builddeploy
@@ -127,6 +129,8 @@ const { count } = await response.json();
 ただし投票合計件数はアプリケーションビルド時に取得しているため、GitHub Actions が実行されたタイミングでのみ更新されます。main ブランチへの push が実行トリガーとなっていますが、それに加えて毎日決まった時間に実行するようにしてみましょう。
 
 `.github/workflows` 直下の yml ファイルに下記を追記します。
+
+※ インデントがずれないようご注意ください。
 
 ```diff
 on:

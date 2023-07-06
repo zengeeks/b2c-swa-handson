@@ -165,7 +165,10 @@ Azure Functions のプロジェクトを作成します。VS Code のメニュ�
 
 <br>
 
-コマンドパレットで「functions create」と入力して、`Azure Functions: Create New Project...` をクリックします。
+コマンドパレットで「functions create」と入力して以下を選びます。
+
+- はじめて Function を作成する場合は `Azure Functions: Create New Project...` をクリックします。
+- 2回目以降 (後続の「ログインユーザーに依存するデータを作成・取得する」「Appendix: ログインユーザーに依存しないデータを取得する」の章で Function を作成する場合) は `Azure Functions: Create Function...` をクリックします。
 
 ![img](./images/setup-application/3-04.png)
 
@@ -173,11 +176,16 @@ Azure Functions のプロジェクトを作成します。VS Code のメニュ�
 
 以降対話式になりますので、以下を参考に入力を進めます。
 
+`Azure Functions: Create New Project...` 選択時のみの設定:
+
 - **Select the folder that will contain your function project**: `Browse` をクリックし、`packages` → `api` のフォルダを選択します。
 - **Select a language**: `TypeScript`
 - **Select a TypeScript programming model**: `Mode V3`
+
+初回、2回目以降で Function を作成するときの共通設定:
+
 - **Select a template for your projects first function**: `HTTP trigger`
-- **Provide a function name**: `HttpTrigger1` (デフォルト値) のまま `Enter` キーを押します。
+- **Provide a function name**: この章では `HttpTrigger1` (デフォルト値) のままで `Enter` キーを押します。2回目以降では各章のドキュメントで記載された値を入力し `Enter` キーを押します。
 - **Authorization level**: `Anonymous`
 
 入力が完了すると、`api` フォルダ直下に Azure Functions の API が生成されます。index.ts が API の実装部分となり、クエリ文字列パラメーターかリクエストボディにある `name` を返すコードになっています。
@@ -194,6 +202,10 @@ Azure Functions は、ここでは動作確認をせず、Azure Static Web App �
 ## 4. コードを GitHub のリポジトリへ push
 
 ここまで実装したコードを GitHub のリポジトリへ push します。
+
+> **🚧 参考: 後述のコミットや push の操作時に Git の "user.name" と "user.email" に関するエラーが出た場合、ローカル git の設定に不足があります。以下のドキュメントを参考に設定をします。**  
+> [ユーザ名とメールの設定 - ローカルのGit設定](https://githubtraining.github.io/training-manual/#/ja/05_local_git_configs?id=%e3%83%a6%e3%83%bc%e3%82%b6%e5%90%8d%e3%81%a8%e3%83%a1%e3%83%bc%e3%83%ab%e3%81%ae%e8%a8%ad%e5%ae%9a)
+
 
 VS Code の Source control をクリック (①) し、コミットメッセージには「静的サイトと API を追加」と入力 (②)し、「Commit」をクリック (③) します。
 

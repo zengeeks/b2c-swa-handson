@@ -18,8 +18,6 @@ VS Code でコードのフォルダを開き、`/packages/api` 直下の `HttpTr
 ![img](./images/create-authenticated-data/1-01.png)
 
 
-（TODO: `HttpTrigger1` フォルダ削除メニューのスクリーンショット）
-
 投票 API 用の Function を作成します。  
 [静的サイトと API を実装 - 3. Azure Functions で API を実装](./setup-application.md#3-azure-functions-で-api-を実装) と同様に設定しますが、対話式で `Provide a function name` と聞かれたら今回は `CreateMyVote` と入力してください。
 
@@ -400,7 +398,8 @@ Static Web App へ環境変数を設定後、コードを push することで G
 
 API から Cosmos DB へアクセスするための接続文字列を環境変数で設定する必要があります。  
 
-Cosmos DB 接続文字列の値は Azure ポータルの Cosmos DB リソース画面から確認できます。メニュー「キー」を開き、 「プライマリ接続文字列」の値をコピーしてください。
+Cosmos DB 接続文字列の値は Azure ポータルの Cosmos DB リソース画面から確認できます。メニュー「キー」を開き、 「プライマリ接続文字列」の右側にある目のアイコンをクリックして文字列を表示してから値をコピーします。  
+文字列を表示せずにコピーすると「*」でコピーされるのでご注意ください。
 
 ![img](./images/create-authenticated-data/4-01.png)
 
