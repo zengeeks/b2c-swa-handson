@@ -73,7 +73,8 @@ New-Item packages/api/cosmos.ts
 type nul > packages/api/cosmos.ts 
 ```
 
-`cosmos.ts` に下記のコードを記述します。
+`cosmos.ts` に下記のコードを記述します。  
+このコードにある `process.env.COSMOS_CONNECTION` は、Static Web Apps へデプロイした際には、前章「Cosmos DB リソース作成・設定」で設定した Static Web Apps の環境変数 `COSMOS_CONNECTION` が参照されます。
 
 ```ts
 import { CosmosClient } from "@azure/cosmos";
@@ -82,7 +83,6 @@ const client = new CosmosClient(process.env.COSMOS_CONNECTION);
 export const database = client.database("Campaigns");
 ```
 
-ここでの `process.env.COSMOS_CONNECTION` は環境変数の `COSMOS_CONNECTION` を参照するので、後述のステップで値を設定します。
 
 つぎに、 `packages/api/CreateMyVote/index.ts` の内容を下記に置き換えます。
 
@@ -392,31 +392,9 @@ import Vote from "../components/Vote";
 
 ## 4. Static Web Apps・Cosmos DB で動作確認
 
-Static Web App へ環境変数を設定後、コードを push することで GitHub Actions によって自動でデプロイをして動作確認をします。
+コードを push することで GitHub Actions によって自動でデプロイをして動作確認をします。
 
-### 4-1. Static Web Apps で Cosmos DB の接続文字列を構成
-
-API から Cosmos DB へアクセスするための接続文字列を環境変数で設定する必要があります。  
-
-Cosmos DB 接続文字列の値は Azure ポータルの Cosmos DB リソース画面から確認できます。メニュー「キー」を開き、 「プライマリ接続文字列」の右側にある目のアイコンをクリックして文字列を表示してから値をコピーします。  
-文字列を表示せずにコピーすると「*」でコピーされるのでご注意ください。
-
-![img](./images/create-authenticated-data/4-01.png)
-
-<br>
-
-Azure ポータルで Static Web Apps リソースのメニュー「構成」を開き、「アプリケーション設定の追加」で下記の値を入力します。
-
-- **名前**: `COSMOS_CONNECTION`
-- **値**: Cosmos DB 接続文字列
-
-詳細の手順は、[静的サイトに認証を組み込む - 1. Static Web App の構成を追加](./setup-auth.md#1-static-web-app-の構成を追加) の通りです。
-
-
-### 4-2. 動作確認
-
-[静的サイトと API を実装 - 4. コードを GitHub のリポジトリへ push](./setup-application.md#4-コードを-github-のリポジトリへ-push) の通りにコードを push し、GitHub Actions のワークフローの完了を待ちます。
-
+[静的サイトと API を実装 - 4. コードを GitHub のリポジトリへ push](./setup-application.md#4-コードを-github-のリポジトリへ-push) を参考にコードを push し、GitHub Actions のワークフローの完了を待ちます。
 
 デプロイと環境変数の設定が完了したら Static Web App にアクセスして動作を確認します。
 
