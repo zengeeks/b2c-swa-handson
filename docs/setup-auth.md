@@ -51,6 +51,10 @@ Azure Static Web Apps は staticwebapp.config.json を構成するだけで認�
 
 ### 2-1. staticwebapp.config.json を構成する
 
+最初に、Static Web Apps をデプロイした際に GitHub Actions のワークフローファイルが追加されているため、`git pull` を行います。
+
+- コマンドで `git pull` を実行していただくか、VS Code の
+
 Astro プロジェクトの静的サイトのコードを開いた状態の VS Code で、`/packages/` 直下の `frontend` フォルダを右クリック →「New File」をクリックしてファイルを追加します。ファイル名は `staticwebapp.config.json` にします。
 
 ※ ファイル名を間違えると Static Web Apps から認識されないので注意です。
