@@ -20,7 +20,7 @@ VS Code でコードのフォルダを開き、`/packages/api` 直下の `HttpTr
 
 投票 API 用の Function を作成します。  
 
-Azure Functions のプロジェクトを作成します。VS Code のメニュー「View」→「Command Palette」をクリックします。
+まず VS Code のメニュー「View」→「Command Palette」をクリックします。
 
 ![img](./images/setup-application/3-03.png)
 
