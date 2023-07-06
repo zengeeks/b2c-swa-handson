@@ -19,7 +19,20 @@ VS Code でコードのフォルダを開き、`/packages/api` 直下の `HttpTr
 
 
 投票 API 用の Function を作成します。  
-[静的サイトと API を実装 - 3. Azure Functions で API を実装](./setup-application.md#3-azure-functions-で-api-を実装) と同様に設定しますが、対話式で `Provide a function name` と聞かれたら今回は `CreateMyVote` と入力してください。
+
+Azure Functions のプロジェクトを作成します。VS Code のメニュー「View」→「Command Palette」をクリックします。
+
+![img](./images/setup-application/3-03.png)
+
+コマンドパレットで「functions create」と入力し、`Azure Functions: Create Function...` をクリックします。
+
+![img](./images/create-authenticated-data/1-02.png)
+
+以降対話式になりますので、以下を参考に入力を進めます。
+
+- **Select a template for your projects first function**: `HTTP trigger`
+- **Provide a function name**: この章では `CreateMyVote` と入力し `Enter` キーを押します。
+- **Authorization level**: `Anonymous`
 
 生成された Function コードのうち `packages/api/CreateMyVote/function.json` を下記のように編集して、 `POST /api/auth/votes` としてこの API にアクセスできるようにします。
 
