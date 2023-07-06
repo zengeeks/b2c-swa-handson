@@ -31,7 +31,7 @@ Azure Cosmos DB のプランの横にある「作成」ボタンを選択しま�
 |----|----|----|
 | | プロジェクトの詳細 | |
 | ① | サブスクリプション | 利用しているサブスクリプションを指定する |
-| ② | リソースグループ | 前述の Azure AD B2C テナントの作成の際に作成したリソースグループを制定する |
+| ② | リソースグループ | 前述の Azure AD B2C テナントの作成の際に作成したリソースグループを設定する |
 | | インスタンスの詳細 | |
 | ③ | アカウント名 | 任意のリソース名を入力 |
 | ④ | 場所 | 利用する地域に近い場所を選択（たとえば `(Asia Pacific) Japan East` など） |
@@ -59,13 +59,14 @@ Azure Cosmos DB のプランの横にある「作成」ボタンを選択しま�
 |----|----|----|
 | ① | Database id | 「Create new」を選択し、 `Campaigns` を入力 |
 | ② | Container id | `Votes` を入力 |
-| ③ | Partition key | `/userId` のまま |
+| ③ | Partition key | `/userId` と入力 |
 
 ![Azure Cosmos DB のデータベースとコンテナを作成する](./images/setup-cosmos-db/create-database-and-container_002.png)
 
 さいごに、Azure Cosmos DB の接続文字列を控えます。次のセクションで利用します。
 
-Azure Cosmos DB の画面左のメニューから「キー」を開き、「プライマリ接続文字列」の値をコピーして控えておきます。
+Azure Cosmos DB の画面左のメニューから「キー」を開き、右側の目のアイコンをクリックして「プライマリ接続文字列」の値を表示してからコピーして控えておきます。  
+文字列を表示せずにコピーすると「*」でコピーされるのでご注意ください。
 
 ![Azure Cosmos DB のプライマリ接続文字列を控える](./images/setup-cosmos-db/copy-cosmos-primary-key.png)
 
